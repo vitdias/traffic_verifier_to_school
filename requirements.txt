@@ -1,0 +1,7 @@
+apache-airflow==2.8.1
+googlemaps==4.10.0
+python-dotenv==1.0.1
+requests==2.31.0
+python-telegram-bot==20.4
+ticktick-py==2.0.3           # opcional, para TickTick
+pywhatkit==6.5               # opcional, para WhatsApp Web
