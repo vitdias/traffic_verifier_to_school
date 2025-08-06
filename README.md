@@ -1,7 +1,3 @@
-**GitHub Repository Description (short)**  
-Python + Airflow + Docker solution to fetch weekday car travel times (home → school) at 18:00, 17:40 & 17:50 and notify via WhatsApp or TickTick.
-
----
 
 # Car-to-School Travel Time Notifier
 
