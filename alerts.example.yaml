@@ -1,0 +1,30 @@
+defaults:
+  timezone: "America/Sao_Paulo"
+  message_template: "[{label}] ETA agora: {eta_minutes} min. Folga: {slack_minutes} min. Horário limite: {latest_arrival_time}."
+
+geocode_cache_file: "data/geocode_cache.json"
+state_file: "data/state.json"
+
+alerts:
+  - label: "Buscar filho - Escola Morumbi Alphaville"
+    destination: "Escola Morumbi Alphaville"
+    latest_arrival_time: "18:30"
+    notify_buffer_minutes: 5
+    schedule_days: ["MON", "TUE", "WED", "THU", "FRI"]
+    active_window_start: "17:00"
+    active_window_end: "18:30"
+    poll_seconds: 60
+    channels: ["telegram", "android_notification", "alexa_voice"]
+    timezone: "America/Sao_Paulo"
+    max_notifications_per_day: 1
+
+  - label: "Alerta escritório"
+    destination: "Alameda América, 710 - Polo - Centro Empresarial Tamboré, Santana de Parnaíba - SP, 06543-315"
+    latest_arrival_time: "09:00"
+    notify_buffer_minutes: 10
+    schedule_days: ["MON", "TUE", "WED", "THU", "FRI"]
+    active_window_start: "07:00"
+    active_window_end: "09:00"
+    poll_seconds: 300
+    channels: ["android_notification"]
+    # timezone omitida para usar defaults.timezone
